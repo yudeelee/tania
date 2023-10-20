@@ -1,0 +1,13 @@
+.Logo {
+    display: block;
+}
+
+@media (max-width: 1000px) {
+    .Logo {
+        display: none;
+    }
+}
+
+.Logo img {
+    width: 90px;
+}

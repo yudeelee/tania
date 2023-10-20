@@ -1,0 +1,18 @@
+.HeaderSocial {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.HeaderSocialItem {
+    cursor: pointer;
+}
+
+.HeaderSocialItem:not(:last-child) {
+    margin-right: 30px;
+}
+
+.HeaderSocialItem a {
+    background-color: transparent;
+    border: none;
+}

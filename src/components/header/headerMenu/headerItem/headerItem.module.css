@@ -1,0 +1,27 @@
+.headerItem:not(:last-child) {
+    margin-right: 40px;
+}
+
+.headerItem {
+    position: relative;
+    padding: 10px 20px;    
+    cursor: pointer;         
+    transition: all .3s;     
+        
+    background-image: linear-gradient(black, black);
+    background-position: center 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .5s;
+    
+}
+
+.headerItem a {
+    text-decoration: none;
+    color: black;
+}
+
+.headerItem:hover {
+    background-size: 100% 2px;
+}
+

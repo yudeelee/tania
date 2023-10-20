@@ -1,0 +1,11 @@
+.HeaderLanguage {
+    display: flex;
+    align-items: center;
+}
+
+.HeaderLanguage button {
+    border: none;
+    padding: 10px 10px;
+    cursor: pointer;
+    background-color: transparent;
+}

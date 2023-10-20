@@ -1,0 +1,23 @@
+.Footer {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 800px) {
+    .Footer {
+        flex-direction: column;
+    }
+}
+
+.tel {
+    margin-right: 50px;
+}
+
+@media (max-width: 800px) {
+    .tel {
+        margin-right: 0px;
+        margin-bottom: 10px;
+    }
+}

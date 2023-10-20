@@ -1,0 +1,40 @@
+@font-face {
+  font-family: Evolventa-Regular;
+  src: url('../public/fonts/Evolventa-Regular.ttf');
+}
+
+@font-face {
+  font-family: Evolventa-Bold;
+  src: url('../public/fonts/Evolventa-Bold.ttf');
+}
+
+@font-face {
+  font-family: Evolventa-BoldOblique;
+  src: url('../public/fonts/Evolventa-BoldOblique.ttf');
+}
+
+@font-face {
+  font-family: Evolventa-Oblique;
+  src: url('../public/fonts/Evolventa-Oblique.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Evolventa-Regular;
+  font-size: 20px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+  color: black !important;
+}

@@ -1,0 +1,118 @@
+.Burger_wrapper {
+    display: none;
+    position: relative;
+    top: -30px;
+    right: -10px;
+    z-index: 100;    
+}
+
+@media (max-width: 1000px) {
+    .Burger_wrapper {
+        display: block;
+    }
+}
+
+@media (max-width: 600px) {
+    .Burger_wrapper {
+        top: -25px;
+    }
+}
+
+.Burger {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;    
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 5;
+    cursor: pointer;    
+}
+
+@media (max-width: 600px) {
+    .Burger {
+        padding: 0px 10px 10px;
+    }
+}
+
+.Burger_inner {    
+    position: relative;
+    height: 3px;
+    background-color: black;
+    width: 100%;
+    transition: all .3s;
+    
+}
+
+.Burger_inner::before {
+    content: '';
+    height: 3px;
+    background-color: black;
+    width: 100%;
+    position: absolute;
+    top: -10px;
+    left: 0px;
+    transition: transform .3s;
+}
+
+.Burger_inner::after {
+    content: '';
+    height: 3px;
+    background-color: black;
+    width: 100%;
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    transition: transform .3s;
+}
+
+.Burger_inner.open {
+    background-color: transparent;  
+}
+
+.Burger_inner.open::before {
+    transform: rotateZ(45deg) translate(10px, 4px);
+    transition: transform .3s;
+}
+
+
+.Burger_inner.open::after {
+    transform: rotateZ(-45deg) translate(10px, -4px);
+    transition: transform .3s;
+}
+
+.Burger_content {    
+    padding: 60px 20px 30px;    
+    background-color: #E6E9F2;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.356);
+    position: absolute;
+    right: 0px;
+    top: 0px;    
+    z-index: 4;
+    transition: all .3s;
+    transform: scale(0, 0);
+    overflow: hidden;
+    border-radius: 10px 0px 10px 10px;    
+}
+
+.Burger_content.open {    
+    transform: scale(1, 1);
+    transition: all .3s;    
+}
+
+.burgerList {
+    list-style: none;
+    padding: 0px;
+    min-width: 200px;
+}
+
+.burgerList li {
+    margin-right: 0px !important;
+}
+
+.burgerList li:nth-child(2n-1) {
+    background-color: #dadde7;
+}

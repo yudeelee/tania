@@ -1,0 +1,127 @@
+.container {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1300px) {
+    .container {
+        width: 1100px;
+    }
+}
+
+@media (max-width: 1150px) {
+    .container {
+        width: 1000px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        width: 100%;
+        padding: 0px 10px;
+    }
+}
+
+.Popup {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    z-index: 10;
+    background-color: #e6e9f2d8;      
+    display: flex;
+    transform: scale(0, 0);  
+    justify-content: center;
+    align-items: center;   
+    transition: transform 0.5s;     
+}
+
+.Popup.open {
+    transform: scale(1, 1);    
+}
+
+.Popup.close {
+    transform: scale(0, 0);
+}
+
+.Popup_content {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.5s;
+    /* margin-top: 100px; */
+    margin-left: 10px;
+    margin-right: 27px; 
+    overflow-y: auto; 
+}
+
+.Popup_content::-webkit-scrollbar {
+    width: 3px;
+}
+
+.Popup_content::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.719);
+}
+
+.Popup_content::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 0, 0);
+    outline: 1px solid slategrey;
+}
+
+@media (max-width: 380px) {
+    .Popup_content {
+        /* margin-top: 200px; */
+    }
+}
+
+.Popup_content.close {
+   transform: scale(0, 0);
+   transition: transform 0.5s;
+}
+
+.Popup_content.open {
+    position: absolute;
+    max-width: 1280px;
+    width: auto;
+    max-height: 80%;
+    height: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transform: scale(1, 1);
+    background-color: white;
+    transition: transform 0.5s;    
+}
+
+.Popup_close {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #E6E9F2;
+    border-radius: 50%;
+    border: 1px solid #9a9eaa;
+    cursor: pointer;
+}
+
+.Popup_close::before {
+    content: '';
+    height: 2px;
+    width: 40px;
+    background-color: rgb(87, 87, 87);
+    position: absolute;
+    transform: rotateZ(45deg);
+    top: 22px;
+    left: 4px;
+}
+
+.Popup_close::after {
+    content: '';
+    height: 2px;
+    width: 40px;
+    background-color: rgb(87, 87, 87);
+    position: absolute;
+    transform: rotateZ(-45deg);
+    top: 22px;
+    left: 4px;
+}

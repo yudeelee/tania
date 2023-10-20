@@ -1,0 +1,28 @@
+.headerFooter {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (max-width: 1000px) {
+    .headerFooter {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 450px) {
+    .headerFooter {
+        margin-top: 25px;
+    }
+}
+
+.headfoot_wrapper {
+    display: block;
+}
+
+@media (max-width: 1000px) {
+    .headfoot_wrapper {
+        display: none;
+    }
+}
